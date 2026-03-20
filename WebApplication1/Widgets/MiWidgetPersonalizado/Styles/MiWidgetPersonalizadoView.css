@@ -1,0 +1,83 @@
+﻿.widget-contenedor {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.widget-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+    .widget-header h3 {
+        color: #007bff;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .widget-header p {
+        color: #666;
+        margin-top: 5px;
+    }
+
+.widget-info {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.widget-data table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.widget-data th {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.widget-data td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.widget-data tr:hover {
+    background: #f0f0f0;
+}
+
+.item-id {
+    color: #666;
+}
+
+.item-nombre {
+    color: #333;
+    font-weight: 500;
+}
+
+.item-valor {
+    color: #007bff;
+}
+
+.sin-datos {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+
+.widget-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+}

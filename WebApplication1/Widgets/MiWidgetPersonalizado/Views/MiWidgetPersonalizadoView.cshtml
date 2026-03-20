@@ -1,0 +1,53 @@
+﻿@model WebApplication1.Widgets.MiWidgetPersonalizado.Models.WidgetDataModel
+<link rel="stylesheet" href="~/Widgets/MiWidgetPersonalizado/Styles/MiWidgetPersonalizadoView.css" />
+
+<div class="widget-contenedor">
+
+    <div class="widget-header">
+        <h3>@Model.Titulo</h3>
+        <p>@Model.Descripcion</p>
+    </div>
+
+    <div class="widget-info">
+        <p><strong>Fecha de creación:</strong> @Model.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Total de items:</strong> @(Model.Items?.Count ?? 0)</p>
+    </div>
+
+    <div class="widget-data">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Items != null && Model.Items.Count > 0)
+                {
+                    foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td class="item-id">@item.Id</td>
+                            <td class="item-nombre">@item.Nombre</td>
+                            <td class="item-valor">@item.Valor</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3" class="sin-datos">
+                            No hay datos disponibles
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="widget-footer">
+        <p>Widget creado: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+    </div>
+
+</div>
