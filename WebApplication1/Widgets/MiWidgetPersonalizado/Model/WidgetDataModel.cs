@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WebApplication1.Widgets.MiWidgetPersonalizado.Models
 {
@@ -12,5 +10,4 @@ namespace WebApplication1.Widgets.MiWidgetPersonalizado.Models
         public List<ItemWidget> Items { get; set; }
         public DateTime FechaCreacion { get; set; }
     }
-
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Telerik.Sitefinity.Mvc;
-using Telerik.Sitefinity.Services;
 using WebApplication1.Widgets.MiWidgetPersonalizado.Models;
 
 namespace WebApplication1.Widgets
@@ -12,7 +11,6 @@ namespace WebApplication1.Widgets
         Title = "Mi Widget Personalizado",
         SectionName = "Custom Widgets",
         Description = "Widget que muestra datos de ejemplo")]
-
     public class MiWidgetPersonalizadoController : Controller
     {
         public ActionResult Index()
@@ -29,13 +27,10 @@ namespace WebApplication1.Widgets
                 Titulo = "Datos del Widget",
                 Descripcion = "Widget personalizado simple",
                 Items = items,
-                FechaCreacion = DateTime.Now,
-                FechaRender = DateTime.Now
+                FechaCreacion = DateTime.Now
             };
 
-            return View(model);
+            return View("MiWidgetPersonalizadoView", model);
         }
     }
 }
-
- 
